@@ -1,20 +1,11 @@
-/*
-h1 - 48px
-h2 - 36px
-h3 - 28px
-all other text - 21px
-
-colors: 
-   #588C94 
-   #1D3C41
-*/
-
 /* Global styles  */
 
 body {
-  margin: 0;
-  /* this font size will effect all elements (other than h1 -> h6) on the page */
-  font-size: 21px;
+   margin: 0;
+   background-color: #BBBDCC;
+   /* this font size will effect all elements (other than h1 -> h6) on the page */
+   font-size: 21px;
+   height: 100vh;
 }
 
 /* ========
@@ -22,15 +13,52 @@ Typography
 ======== */
 
 h1 {
-  font-size: 48px;
+   font-size: 48px;
+   margin: 0;
 }
 
 h2 {
-  font-size: 36px;
+   font-size: 36px;
+   margin: 0;
 }
 
 h3 {
-  font-size: 28px;
+   font-size: 28px;
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+   color: #fff;
+}
+
+a:hover {
+   text-decoration: underline;
+   color: #A3145A;
+}
+
+/* ========
+Images
+======== */
+.profile-image {
+   margin: 10px;
+}
+
+.profile-image-container {
+   background-color: #827EA0;
+   width: 20%;
+   height: 300px;
+   border: 1px solid #06354D;
+   margin-right: 40px;
+   object-fit: cover;
+}
+
+.background-image {
+   width: 100%;
+   background-image: url("/images/ocean.jpg");
+   background-repeat:no-repeat;
+   background-size:contain;
+   background-position:center;
 }
 
 /* ========
@@ -38,29 +66,170 @@ Layout
 ======== */
 
 header {
-  background-color: #588C94;
-  color: white;
-  padding: 30px 0;
-  text-align: center;
+   background-color: #144967;
+   color: white;
+   padding: 20px 20px;
+   text-align: center;
+   box-shadow: 0 20px 25px -5px rgba(6, 53, 77, .3), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.intro {
-  width: 500px;
-  margin: 100px auto;
-  text-align: center;
+footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color: #5192C1;
+   color: #fff;
+   padding: 10px 0;
+   text-align: center;
+}
+
+.name {
+   display: flex;
+   width: 40%;
+   align-items: center;
+   justify-content: flex-start;
 }
 
 .my-skills {
-  background-color: #1D3C41;
-  color: #fff;
-  padding: 75px 0;
-  text-align: center;
+   padding: 75px 0;
+   text-align: center;
+   height: 100%;
 }
 
-.columns {
-  display: flex;
+.skill-item {
+   width: 30%;
+   margin: 20px;
+   box-shadow: 0 4px 6px -1px rgba(6, 53, 77, .1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.column {
-  margin: 0 10px;
+.skill-item h3 {
+   background-color: #1D5191;
+   color: #fff;
+   border-top-left-radius: .125rem;
+   border-top-right-radius: .125rem;
+}
+
+.skill-item p {
+   margin: 0;
+   padding: 1em;
+   background-color: #fff;
+   border-bottom-right-radius: .125rem;
+   border-bottom-left-radius: .125rem;
+}
+
+.my-samples {
+   padding: 75px 0;
+   text-align: center;
+   height: 100%;
+}
+
+.sample-item {
+   width: 30%;
+   margin: 20px;
+   box-shadow: 0 4px 6px -1px rgba(6, 53, 77, .1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.sample-item h3 {
+   background-color: #06354D;
+   color: #fff;
+   border-top-left-radius: .125rem;
+   border-top-right-radius: .125rem;
+}
+
+.sample-item p {
+   margin: 0;
+   padding: 1em;
+   background-color: #fff;
+   border-bottom-right-radius: .125rem;
+   border-bottom-left-radius: .125rem;
+}
+
+.intro {
+   background-color: rgba(6, 53, 77, .7);
+   color: #fff;
+   padding: 1em;
+   width: 80%;
+}
+
+.profile {
+   display: flex;
+   height: 100%;
+   padding: 100px 40px;
+}
+
+.profile-grid {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.profile-item {
+   margin-top: 2em;
+   width: 50%;
+}
+
+/* ========
+Navigation
+======== */
+
+.main-nav {
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-end;
+   width: 60%;
+}
+
+.nav-item {
+   padding: 0 10px;
+}
+
+header nav a:hover {
+   color: #5AA314;
+}
+
+/* ========
+Utility classes
+======== */
+
+.flex {
+   display: flex;
+}
+
+.flex-wrap {
+   flex-wrap: wrap;
+}
+
+.center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.margin-tb-lg {
+   margin: 40px 0;
+}
+
+.padding-tb-lg {
+   padding: 40px 0;
+}
+
+.shadow {
+   box-shadow: 0 4px 6px -1px rgba(6, 53, 77, .1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.rounded-top {
+   border-top-left-radius: .125rem;
+   border-top-right-radius: .125rem;
+}
+
+.rounded-bottom {
+   border-bottom-right-radius: .125rem;
+   border-bottom-left-radius: .125rem;
+}
+
+.rounded-full {
+   border-radius: 9999px;
+}
+
+.rounded {
+   border-radius: .25rem;
 }
